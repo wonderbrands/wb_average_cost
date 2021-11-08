@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+      <record id="product_template_inherit" model="ir.ui.view">
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+          <xpath expr="//form" position="attributes">
+            <attribute name="name">Product Template</attribute>
+          </xpath>
+          <field name="categ_id" position="after">
+            <field name="average_cost" widget="monetary"/>
+          </field>
+        </field>
+      </record>
+    </data>
+</odoo>
+    
